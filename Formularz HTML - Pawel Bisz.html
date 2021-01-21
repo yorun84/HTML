@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokument z Formularzem</title>
+
+</head>
+
+    <body>
+
+    <h1>Formularz Zaliczeniowy Pawel Bisz</h1>
+
+    <form action="http://pawelbisch.com/skrypt.php" method="post" 
+        enctype='multipart/form-data' autocomplete="on" >
+
+        <fieldset>
+
+            <legend>Twoje Dane</legend>
+
+                <label for="imie-id">Imie lub nick</label>
+                <input id="imie-id" type="text" name="imie" size="12"  minlength="3" 
+                maxlength="12" required="required" autofocus placeholder="Imie lub nick"><br>
+                <!--Wprowadzenie imienia lub nicku pole wymagane-->
+
+                <label for="haslo-id">Haslo</label>
+                <input id="haslo-id" type="password"  name="haslo" minlength="8" 
+                required="required" placeholder="np.Avatar487$"><br>
+                <!--Wprowadzenie hasla pole wymagane-->
+
+                <label for="haslo1-id">Powtorz haslo</label>
+                <input id="haslo1-id" type="password"  name="haslo1" minlength="8"
+                required="required" placeholder="np.Avatar487$"><br>
+                <!--powtorzenie hasla hasla pole wymagane-->
+
+                <label for="phone-id">Numer Telefonu</label>
+                <input id="phone-id" type="tel" name="telefon" title="Wprowadz 9 cyfr"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" 
+                placeholder="np 789-365-321" required="required"><br>
+                <!--Wprowadzenie telefonu pole wymagane-->
+
+                <label for="birthdate-id">Data Urodzenia</label>
+                <input id="birthdate-id" type="date"  name="data urodzenia" min="1918-11-11" required="required"><br>
+                <!--Wprowadzenie daty urodzenia pole wymagane-->
+
+                <label for="man-id">Mezczyzna</label>
+                <input id="man-id" type="radio"  name="plec" value="mezczyzna">
+                <label for="woman-id">Kobieta</label>
+                <input id="woman-id" type="radio"  name="plec" value="kobieta" checked><br>
+                <!--Wprowadzenie plec-->
+
+                <label for="avatar-id">Twoj Awatar</label>
+                <input id="avatar-id" type="file" name="awatar" accept="image/*"><br>
+                <!--Wprowadzenie avataru-->
+
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Zainteresowania i umiejetnosci</legend>
+
+                Sport: 
+                <label for="football-id">Pilka nozna</label>
+                <input id="football-id" type="checkbox" name="pilka-nozna" value="pilka-nozna">
+                <label for="handball-id">Szczypiorniak</label>
+                <input id="handball-id" type="checkbox" name="szczypiorniak" value="szczypiorniak" checked>
+                <label for="motor-id">Zuzel</label>
+                <input id="motor-id" type="checkbox" name="zuzel" value="zuzel"><br>
+                <!--Wprowadzenie ulubionego sportu-->
+
+                <Label for="skills-id"> Umiejetnosci IT</Label><br>
+                <select id="skills-id" name="umiejetnosci it" multiple="multiple" size="5">
+                        
+                    <optgroup label="Systemy Operacyjne">
+                            
+                        <option value="windows" selected="selected">Windows</option>
+                        <option value="winuks" selected="selected">Linuks</option>
+                        <option value="powerpoint">MacOS</option>
+
+                    </optgroup>
+
+                    <optgroup label="Oprogramowanie biurowe">
+
+                        <option value="word" >Word</option>
+                        <option value="excel" >Excel</option>
+                        <option value="MacOS">PowerPoint</option>
+
+                    </optgroup>
+                    <!--Wybieranie uzywanego oprogramowania i systemow operacyjnych-->
+
+                </select><br>
+
+                <label for="color-id">Ulubiony Kolor</label>
+                <input id="color-id" type="color" name="kolor"><br>
+                <!--Wybieranie ulubionego koloru-->
+
+                <label for="monday-id">Jak bardzo nie lubisz poniedzialku</label>
+                <input id="monday-id" type="range" name="poniedzialek" min="0" max="10" step="1"><br>
+                <!--Jak bardzo nie lubisz poniedzialku-->
+
+                <label for="text-id">Kilka slow o pozostalych zainteresowaniach</label><br>
+                
+                <textarea id="text-id" name="tekst" rows="4" cols="50"
+                minlength="50" maxlength="200" autocapitalize="words" wrap="soft">
+            
+                </textarea><br>
+                <!--Kilka slow o zainteresowaniach-->
+
+                <input type='submit' value="Wyslij Dane">
+                <input type='reset' value="Zresetuj Dane">
+
+        </fieldset>
+
+    </form>
+
+    </body>
+
+</html>
